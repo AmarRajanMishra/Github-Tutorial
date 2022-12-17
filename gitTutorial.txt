@@ -1,0 +1,650 @@
+──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git --version          
+git version 2.35.1
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git config --list                                      
+user.name=michael
+user.email=amar1998mishra@gmail.com
+user.name=Amar
+user.name=Amar
+color.ui=auto
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=git@github.com:AmarRajanMishra/TestRepo.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git init         
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint:   git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/michael/Desktop/Samyak-Computer-Classes/GitHubTutorial/.git/
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ ls
+index.html  script.js  style.css
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+        index.html
+        script.js
+        style.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git add index.html
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git status        
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+        script.js
+        style.css
+
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git add -A        
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   about.html
+        new file:   index.html
+        new file:   script.js
+        new file:   style.css
+
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   about.html
+        new file:   index.html
+        new file:   script.js
+        new file:   style.css
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   about.html
+
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git checkout about.html
+Updated 1 path from the index
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git status             
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   about.html
+        new file:   index.html
+        new file:   script.js
+        new file:   style.css
+
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git log   
+fatal: your current branch 'master' does not have any commits yet
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git commit -m "update some new files"                                                                  128 ⨯
+[master (root-commit) 8f848e2] update some new files
+ 4 files changed, 27 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 index.html
+ create mode 100644 script.js
+ create mode 100644 style.css
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git log                              
+commit 8f848e24f67ebddb832b60de45645c409153b631 (HEAD -> master)
+Author: Amar <amar1998mishra@gmail.com>
+Date:   Sat Dec 17 10:30:48 2022 +0530
+
+    update some new files
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git diff
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git diff
+diff --git a/about.html b/about.html
+index 56efbdb..d2b3bc3 100644
+--- a/about.html
++++ b/about.html
+@@ -7,6 +7,6 @@
+     <title>Document</title>
+ </head>
+ <body>
+-    
++    <h1>Welcome to about Page</h1>
+ </body>
+ </html>
+\ No newline at end of file
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git diff
+diff --git a/about.html b/about.html
+index 56efbdb..d2b3bc3 100644
+--- a/about.html
++++ b/about.html
+@@ -7,6 +7,6 @@
+     <title>Document</title>
+ </head>
+ <body>
+-    
++    <h1>Welcome to about Page</h1>
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/index.html b/index.html
+index b66fb6d..62cc600 100644
+--- a/index.html
++++ b/index.html
+@@ -9,6 +9,7 @@
+ </head>
+ <body>
+     <h1>Github Tutorial</h1>
++    <h1>Welcome to home page</h1>
+     
+     <script src="script.js"></script>
+ </body>
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git diff HEAD
+diff --git a/about.html b/about.html
+index 56efbdb..d2b3bc3 100644
+--- a/about.html
++++ b/about.html
+@@ -7,6 +7,6 @@
+     <title>Document</title>
+ </head>
+ <body>
+-    
++    <h1>Welcome to about Page</h1>
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/index.html b/index.html
+index b66fb6d..62cc600 100644
+--- a/index.html
++++ b/index.html
+@@ -9,6 +9,7 @@
+ </head>
+ <body>
+     <h1>Github Tutorial</h1>
++    <h1>Welcome to home page</h1>
+     
+     <script src="script.js"></script>
+ </body>
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git diff HEAD
+diff --git a/about.html b/about.html
+index 56efbdb..d2b3bc3 100644
+--- a/about.html
++++ b/about.html
+@@ -7,6 +7,6 @@
+     <title>Document</title>
+ </head>
+ <body>
+-    
++    <h1>Welcome to about Page</h1>
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/index.html b/index.html
+index b66fb6d..62cc600 100644
+--- a/index.html
++++ b/index.html
+@@ -9,6 +9,7 @@
+ </head>
+ <body>
+     <h1>Github Tutorial</h1>
++    <h1>Welcome to home page</h1>
+     
+     <script src="script.js"></script>
+ </body>
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git diff head
+fatal: ambiguous argument 'head': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git diff --staged                                                                                      128 ⨯
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git show         
+commit 8f848e24f67ebddb832b60de45645c409153b631 (HEAD -> master)
+Author: Amar <amar1998mishra@gmail.com>
+Date:   Sat Dec 17 10:30:48 2022 +0530
+
+    update some new files
+
+diff --git a/about.html b/about.html
+new file mode 100644
+index 0000000..56efbdb
+--- /dev/null
++++ b/about.html
+@@ -0,0 +1,12 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <meta http-equiv="X-UA-Compatible" content="IE=edge">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Document</title>
++</head>
++<body>
++    
++</body>
++</html>
+\ No newline at end of file
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000..b66fb6d
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,15 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <meta http-equiv="X-UA-Compatible" content="IE=edge">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Github Tutorial</title>
++    <link rel="stylesheet" href="style.css">
++</head>
++<body>
++    <h1>Github Tutorial</h1>
++    
++    <script src="script.js"></script>
++</body>
++</html>
+\ No newline at end of file
+diff --git a/script.js b/script.js
+new file mode 100644
+index 0000000..e69de29
+diff --git a/style.css b/style.css
+new file mode 100644
+index 0000000..e69de29
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git log --state
+fatal: unrecognized argument: --state
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git log --stat                                                                                         128 ⨯
+commit 8f848e24f67ebddb832b60de45645c409153b631 (HEAD -> master)
+Author: Amar <amar1998mishra@gmail.com>
+Date:   Sat Dec 17 10:30:48 2022 +0530
+
+    update some new files
+
+ about.html | 12 ++++++++++++
+ index.html | 15 +++++++++++++++
+ script.js  |  0
+ style.css  |  0
+ 4 files changed, 27 insertions(+)
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git status    
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   about.html
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sevices.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git add -A
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   about.html
+        modified:   index.html
+        new file:   sevices.html
+
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git rm --cached services.html                                         
+fatal: pathspec 'services.html' did not match any files
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git rm --cached sevices.html                                                                           128 ⨯
+rm 'sevices.html'
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git status                  
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   about.html
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sevices.html
+
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git rm sevices.html         
+fatal: pathspec 'sevices.html' did not match any files
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git add -A                                                                                             128 ⨯
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git status         
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   about.html
+        modified:   index.html
+        new file:   sevices.html
+
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git rm sevices.html
+error: the following file has changes staged in the index:
+    sevices.html
+(use --cached to keep the file, or -f to force removal)
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git rm -f sevices.html                                                                                   1 ⨯
+rm 'sevices.html'
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git status            
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   about.html
+        modified:   index.html
+
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git branch --list 
+* master
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git branch login 
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git branch --list
+  login
+* master
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git checkout login                   
+M       about.html
+M       index.html
+Switched to branch 'login'
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git branch --list 
+* login
+  master
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git status        
+On branch login
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   about.html
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        login.html
+
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git checkout master
+M       about.html
+M       index.html
+Switched to branch 'master'
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git status         
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   about.html
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        login.html
+
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git checkout login.html
+error: pathspec 'login.html' did not match any file(s) known to git
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git add -A                                                                                               1 ⨯
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   about.html
+        modified:   index.html
+        new file:   login.html
+
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git rm -f login.html  
+rm 'login.html'
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git status          
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   about.html
+        modified:   index.html
+
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git commit -m "update some new files"
+[master cbe33b1] update some new files
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git status                           
+On branch master
+nothing to commit, working tree clean
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git checkout login                   
+Switched to branch 'login'
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git branch --list                    
+* login
+  master
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git status       
+On branch login
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        login.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git add -A
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git commit -m "update some new file at login branch"
+[login 712aaab] update some new file at login branch
+ 1 file changed, 12 insertions(+)
+ create mode 100644 login.html
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git checkout master                                 
+Switched to branch 'master'
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git status         
+On branch master
+nothing to commit, working tree clean
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git branch login2                                   
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git status       
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        login2.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git add -A
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git commit -m "update some new file at login2 branch"
+[master 9ff6e00] update some new file at login2 branch
+ 1 file changed, 12 insertions(+)
+ create mode 100644 login2.html
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git checkout master                                  
+Already on 'master'
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git status         
+On branch master
+nothing to commit, working tree clean
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git branch -D login2
+Deleted branch login2 (was cbe33b1).
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git branch --list   
+  login
+* master
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git checkout login 
+Switched to branch 'login'
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git merge master  
+Merge made by the 'ort' strategy.
+ about.html  |  2 +-
+ index.html  |  2 +-
+ login2.html | 12 ++++++++++++
+ 3 files changed, 14 insertions(+), 2 deletions(-)
+ create mode 100644 login2.html
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git branch --list
+* login
+  master
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git checkout master
+Switched to branch 'master'
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git status         
+On branch master
+nothing to commit, working tree clean
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git merge login 
+Updating 9ff6e00..6420890
+Fast-forward
+ login.html | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 login.html
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git branch --list
+  login
+* master
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git branch -d login
+Deleted branch login (was 6420890).
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git branch --list  
+* master
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git remote add origin https://github.com/AmarRajanMishra/Github-Tutorial.git
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git branch -M main                                                          
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git branch --list                                                           
+* main
+                                                                                                                 
+┌──(michael㉿Michael)-[~/Desktop/Samyak-Computer-Classes/GitHubTutorial]
+└─$ git push -u origin main
+
